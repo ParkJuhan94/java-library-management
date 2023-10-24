@@ -8,7 +8,7 @@ public enum BookStatus {
     LOST("분실됨"),
     DELETE("삭제됨");
 
-    final private String name;
+    private final String name;
 
     public String getName() {
         return name;

@@ -12,6 +12,7 @@ public class ModeMenu {
     private List<String> modeList;
     private String selectMode;
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    private final String NEW_LINE = System.lineSeparator();
 
     public ModeMenu() {
         modeList = new ArrayList<>();
@@ -31,14 +32,14 @@ public class ModeMenu {
             int selectModeNum = Integer.parseInt(br.readLine());
 
             if(selectModeNum >= modeList.size() || selectModeNum == 0){
-                System.out.println(INVALID_MODE_MENU.getMessage() + "\n");
+                System.out.println(INVALID_MODE_MENU.getMessage() + NEW_LINE);
                 continue;
             }
 
             String selectMode = modeList.get(selectModeNum);
             setSelectMode(selectMode);
 
-            System.out.println("[System] " + this.selectMode + "로 애플리케이션을 실행합니다.\n");
+            System.out.println("[System] " + this.selectMode + "로 애플리케이션을 실행합니다." + NEW_LINE);
             break;
         }
     }

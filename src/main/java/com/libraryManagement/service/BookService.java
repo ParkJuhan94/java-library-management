@@ -40,15 +40,15 @@ public class BookService {
                 .build();
     }
 
-    public List<Book> findBooks() throws Exception {
+    public List<Book> findBooks() {
         return repository.findAllBooks();
     }
 
-    public List<Book> findBooksByTitle(String str) throws Exception {
+    public List<Book> findBooksByTitle(String str) {
         return repository.findBooksByTitle(str);
     }
 
-    public void rentBook(long id) throws Exception {
+    public void rentBook(long id) {
         if(repository.findBookById(id).isPossibleRent()){
             repository.updateBookStatus(id, RENT.getName());
         } else {
@@ -67,7 +67,7 @@ public class BookService {
 
     }
 
-    public void returnBook(long id) throws Exception {
+    public void returnBook(long id) {
         if(repository.findBookById(id).isPossibleReturn())
             repository.updateBookStatus(id, ORGANIZING.getName());
 
@@ -77,12 +77,12 @@ public class BookService {
         }, 5, TimeUnit.MINUTES);
     }
 
-    public void lostBook(long id) throws Exception {
+    public void lostBook(long id) {
         if(repository.findBookById(id).isPossibleLost())
             repository.updateBookStatus(id, LOST.getName());
     }
 
-    public void deleteBook(long id) throws Exception {
+    public void deleteBook(long id) {
         if(repository.findBookById(id).isPossibleDelete())
             repository.updateBookStatus(id, DELETE.getName());
     }

@@ -1,4 +1,4 @@
-package com.libraryManagement.util;
+package com.libraryManagement.configuration;
 
 import com.libraryManagement.controller.BookController;
 import com.libraryManagement.io.BookIO;

@@ -4,8 +4,7 @@ import com.libraryManagement.io.ModeMenu;
 import com.libraryManagement.repository.FileRepository;
 import com.libraryManagement.repository.MemoryRepository;
 import com.libraryManagement.repository.Repository;
-import com.libraryManagement.util.AppConfig;
-import javax.swing.DefaultDesktopManager;
+import com.libraryManagement.configuration.AppConfig;
 
 public class LibraryManagementApplication {
 	private static final AppConfig appConfig = new AppConfig();

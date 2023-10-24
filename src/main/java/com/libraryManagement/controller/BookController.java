@@ -59,7 +59,7 @@ public class BookController {
         bookIO.outputInsertMsg();
     }
 
-    private void findBooks() throws Exception {
+    private void findBooks() {
         List<Book> bookList = bookService.findBooks();
         bookIO.outputBookList(bookList);
         bookIO.outputFindBooksMsg();
